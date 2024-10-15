@@ -1,0 +1,12 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm install express"
+
+[deploy]
+startCommand = "node index.js"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "on-failure"
+
+[nixpacks]
+node-version = "18"
